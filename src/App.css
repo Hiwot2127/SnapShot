@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation {
+  background-color: rgb(239, 239, 250);
+  padding: 50px;
+  color: rgb(20, 20, 87);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .title {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: Maghrib, cursive;
+}
+.navigation .search-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.navigation .search-form input {
+  margin-right: 5px;
+}
+
+.navigation .button-container {
+  margin-top: 10px;
+  color: #000;
+}
+
+.navigation .nav-button {
+  background-color: rgb(20, 20, 87);
+  color: #ffffff;
+  margin-right: 10px;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.beach-button {
+  background-color: rgb(20, 20, 87);
+  color: #ffffff;
+  margin-right: 10px;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-right: 0rem;
+  margin-left: 5rem;
+}
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(20, 20, 87);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.post-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.no-query {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(20, 20, 87);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 12px 55px;
+  border: none;
+  border-radius: 15px;
+  background-color: #cfd1ec;
+  font-size: 16px;
+  outline: rgb(20, 20, 87);
+}
+
+.search-button {
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 87);
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.search-icon {
+  color: #fff;
+  font-size: 18px;
+}
+
+.skeleton-post {
+  width: 350px;
+  height: 350px;
+  background-color: #e4e3f5;
+  margin: 0.5rem;
+  animation: skeleton-loading 1s infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.5;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 768px) {
+  .posts-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-image {
+    width: 100%;
+    height: auto;
   }
 }
